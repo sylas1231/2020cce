@@ -33,6 +33,11 @@ int main()
 
 ## 第三題
 ```c
+
+```
+
+## 第四題
+```c
 #include <stdio.h>
 int main()
 {
