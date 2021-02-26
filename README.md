@@ -33,7 +33,18 @@ int main()
 
 ## 第三題
 ```c
-
+#include <stdio.h>
+int main()
+{
+	int n, i, ans=0;
+	for( int i=0; i<10; i++ )
+	{
+		scanf("%d", &n);
+		if( n%3==0 )
+		ans++;
+	}
+	printf("%d\n", ans);
+}
 ```
 
 ## 第四題
@@ -52,7 +63,18 @@ int main()
 
 ## 第五題
 ```c
-
+#include <stdio.h>
+int main()
+{
+	int a, b, i, ans=1;
+	scanf("%d %d", &a, &b);
+	for( int i=1; i<=b; i++ )
+	{
+		if( a%i==0&&b%i==0 )
+		ans=i;
+	}
+	printf("%d %d\n", a/ans, b/ans);
+}
 ```
 
 ## 第六題
