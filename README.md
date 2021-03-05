@@ -1,6 +1,6 @@
 # 2020cce
 
-## 第一題
+## week01 第一題
 ```c
 #include <stdio.h>
 int main()
@@ -11,7 +11,7 @@ int main()
 }
 ```
 
-## 第二題
+## week01 第二題
 ```c
 #include <stdio.h>
 int main()
@@ -31,7 +31,7 @@ int main()
 }
 ```
 
-## 第三題
+## week01 第三題
 ```c
 #include <stdio.h>
 int main()
@@ -47,7 +47,7 @@ int main()
 }
 ```
 
-## 第四題
+## week01 第四題
 ```c
 #include <stdio.h>
 int main()
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-## 第五題
+## week01 第五題
 ```c
 #include <stdio.h>
 int main()
@@ -77,17 +77,3 @@ int main()
 }
 ```
 
-## 第六題
-```c
-
-```
-
-## 第七題
-```c
-
-```
-
-## 第八題
-```c
-
-```
