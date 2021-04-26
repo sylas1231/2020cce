@@ -427,7 +427,7 @@ int main()
 }
 ```
 
-## week06 第一題
+## week07 第一題
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -451,5 +451,125 @@ int main()
     {
         printf("%s\n", line[i]);
     }
+}
+```
+
+## week08 第一題
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+char line[100][10];
+int compare( const void*p1, const void*p2 )
+{
+    return strcmp( (char*)p1, (char*)p2 );
+}
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    for( int i=0; i<n; i++ )
+    {
+        scanf("%s", line[i]);
+    }
+
+    qsort( line, n, 10, compare );
+
+    for( int i=0; i<n; i++ )
+    {
+        printf("%s\n", line[i]);
+    }
+}
+```
+
+## week08 第二題
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+char name[2000][80];
+int compare( const void*p1, const void*p2 )
+{
+    return strcmp( (char*)p1, (char*)p2 );
+}
+
+char trash[80];
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    for( int i=0; i<n; i++ )
+    {
+        scanf("%s", name[i]);
+        gets( trash );
+    }
+    qsort( name, n, 80, compare );
+
+    int ans=1;
+    printf("%s ", name[0]);
+    for( int i=0; i<n-1; i++ )
+    {
+        if( strcmp(name[i], name[i+1])!=0 )
+        {
+            printf("%d\n", ans);
+            printf("%s ", name[i+1]);
+            ans=1;
+        }
+        else ans++;
+    }
+    printf("%d\n", ans);
+}
+```
+
+## week08 第三題
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+char tree[1000000][32];
+int compare( const void*p1, const void*p2 )
+{
+    return strcmp( (char*)p1, (char*)p2 );
+}
+
+int main()
+{
+    int T;
+    scanf("%d", &T);
+
+    int N=0;
+    for( int i=0;    ; i++ )
+    {
+        char*now=gets( tree[i] );
+        if( now==NULL )
+        {
+            N=i;
+            break;
+        }
+        if( strcmp(tree[i], "")==0 )
+        {
+            N=i;
+            break;
+        }
+    }
+
+    qsort( tree, N, 32, compare );
+
+    printf("%s ", tree[0]);
+    int ans=1;
+
+    for( int i=0; i<N-1; i++ )
+    {
+        if( strcmp(tree[i], tree[i+1])!=0 )
+        {
+            printf("%d\n", ans);
+            printf("%s ", tree[i+1]);
+        }
+        else ans++;
+    }
+    printf("%d\n", ans);
 }
 ```
