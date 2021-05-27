@@ -1,6 +1,6 @@
 # 2020cce
 
-### week01 第一題
+## week01 第一題
 ```c
 #include <stdio.h>
 int main()
