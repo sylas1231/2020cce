@@ -1094,3 +1094,112 @@ void mousePressed()
   N++;
 }
 ```
+
+## week15 第一題
+```c
+void setup()
+{
+  size(400, 200);
+  textSize(40);
+}
+void draw()
+{
+  background(41, 109, 207);
+  int s=second();
+  text(s, 100, 100);
+}
+```
+
+## week15 第二題
+```c
+void setup()
+{
+  size(400, 200);
+  textSize(40);
+}
+void draw()
+{
+  background(41, 109, 207);
+  int s=second();
+  text(9-s%10, 100, 100);
+}
+```
+
+## week15 第三題
+```c
+import processing.sound.*;
+SoundFile player;
+void setup()
+{
+  size(400, 200);
+  player=new SoundFile(this, "tada.mp3");
+}
+void draw()
+{
+  background(51,114, 191);
+}
+void mousePressed()
+{
+  player.play();
+}
+```
+
+## week15 第四題
+```c
+import processing.sound.*;
+SoundFile player;
+void setup()
+{
+  size(400, 200);
+  textSize(40);
+  player=new SoundFile(this, "tada.mp3");
+}
+void draw()
+{
+  background(41, 109, 207);
+  int s=second();
+  text(9-s%10, 100, 100);
+  if(9-s%10==0) player.play();
+}
+```
+
+## week15 第五題
+```c
+import processing.sound.*;
+SoundFile player;
+void setup()
+{
+  size(400, 200);
+  player=new SoundFile(this, "bell.mp3");
+}
+void draw()
+{
+  background(51, 114, 191);
+}
+void mousePressed()
+{
+  if(player.isPlaying())
+  {
+    player.stop();
+  }
+  else
+  {
+    player.play();
+  }
+}
+```
+
+## week15 第六題
+```c
+function setup()
+{
+  createCanvas(400, 200);
+  textSize(40);
+}
+function draw()
+{
+  background(41, 109, 207);
+  let s=second();
+  text(s, 100, 100);
+}
+```
